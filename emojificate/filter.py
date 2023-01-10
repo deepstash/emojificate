@@ -8,7 +8,7 @@ from django.conf import settings
 
 __all__ = ["emojificate"]
 
-TWITTER_CDN = "https://twemoji.maxcdn.com/v/latest"
+TWITTER_CDN = "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2"
 if hasattr(settings, "EMOJIFICATE_TWITTER_CDN"):
     TWITTER_CDN = settings.EMOJIFICATE_TWITTER_CDN
 
