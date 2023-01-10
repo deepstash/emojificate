@@ -3,10 +3,15 @@ from grapheme import graphemes
 import emoji
 import requests
 
+from django.conf import settings
+
 
 __all__ = ["emojificate"]
 
 TWITTER_CDN = "https://twemoji.maxcdn.com/v/latest"
+if hasattr(settings, "EMOJIFICATE_TWITTER_CDN"):
+    TWITTER_CDN = settings.EMOJIFICATE_TWITTER_CDN
+
 TWITTER_TYPE = {"png": "/72x72/{codepoint}.png", "svg": "/svg/{codepoint}.svg"}
 
 
